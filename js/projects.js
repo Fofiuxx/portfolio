@@ -111,6 +111,52 @@ window.PROJECTS = [
   },
 
   {
+    id: "frutos-terraba",
+    year: 2025,
+    status: "shipped",
+    category: "web",
+    featured: true,
+    cover: "assets/img/frutos-terraba.svg",
+    tags: ["C#", "ASP.NET Core", "Entity Framework", "SQL Server", "QuestPDF"],
+    links: {
+      repo: "https://github.com/Fofiuxx/Proyecto-C-NetCore",
+    },
+    es: {
+      title: "Frutos del Terrabá",
+      tagline: "Sistema de gestión agrícola: inventario, pedidos, proveedores, distribución y reportes en PDF.",
+      description:
+        "Sistema de gestión para una distribuidora de productos agrícolas, construido en ASP.NET Core " +
+        "como dos aplicaciones separadas: una API REST que es la única que habla con la base de datos, " +
+        "y una aplicación web MVC que la consume por HTTP. Cubre el ciclo completo — catálogo de " +
+        "productos y categorías, proveedores, control de inventario, pedidos con sus líneas de detalle, " +
+        "distribución, y un panel con indicadores.",
+      highlights: [
+        "La web no toca la base de datos: consume su propia API por HTTP, así que el día que haya una app móvil consume la misma.",
+        "Capa de servicios detrás de interfaces e inyectada por el contenedor, lo que permite sustituirla en pruebas sin levantar la base de datos.",
+        "DTOs en la frontera de la API y ViewModels en la capa web: cada capa expone solo lo que necesita, sin filtrar las entidades de la base.",
+        "Autenticación por cookie en la web y JWT en la API, con página de acceso denegado y recuperación de contraseña.",
+        "Reportes generados en PDF con QuestPDF y documentación de la API con Swagger."
+      ]
+    },
+    en: {
+      title: "Frutos del Terrabá",
+      tagline: "Agricultural management system: inventory, orders, suppliers, distribution and PDF reports.",
+      description:
+        "A management system for an agricultural produce distributor, built on ASP.NET Core as two " +
+        "separate applications: a REST API that is the only thing talking to the database, and an MVC " +
+        "web app that consumes it over HTTP. It covers the full cycle — product and category catalog, " +
+        "suppliers, inventory control, orders with their line items, distribution, and a metrics dashboard.",
+      highlights: [
+        "The web app never touches the database: it consumes its own API over HTTP, so a future mobile app would consume the very same one.",
+        "A service layer behind interfaces, injected by the container, which makes it swappable in tests without standing up a database.",
+        "DTOs at the API boundary and ViewModels in the web layer: each layer exposes only what it needs, never leaking database entities.",
+        "Cookie authentication on the web and JWT on the API, with an access-denied page and password recovery.",
+        "PDF reports generated with QuestPDF and API documentation via Swagger."
+      ]
+    }
+  },
+
+  {
     id: "ofertas-vuelos",
     year: 2025,
     status: "shipped",
@@ -405,6 +451,7 @@ window.PROJECTS = [
 
 /* Herramientas que aparecen en la sección "Sobre mí". */
 window.STACK = [
-  "TypeScript", "Node.js", "Express", "C#", "Unity", "Python", "Django",
-  "OpenCV", "MySQL", "SQLite", "PostgreSQL", "React", "Git", "Docker"
+  "C#", "ASP.NET Core", "TypeScript", "Node.js", "Express", "Unity",
+  "Python", "Django", "OpenCV", "SQL Server", "MySQL", "SQLite",
+  "PostgreSQL", "React", "Git", "Docker"
 ];
