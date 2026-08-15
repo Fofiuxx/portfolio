@@ -120,7 +120,9 @@ window.PROJECTS = [
     cover: "assets/img/ofertas-vuelos.svg",
     tags: ["Node.js", "Express", "MySQL", "JWT", "bcrypt"],
     links: {
-      repo: "https://github.com/Fofiuxx/ofertas-vuelos",
+      // Descomenta en cuanto hagas push del repositorio ofertas-vuelos.
+      // Hasta entonces el enlace daría 404.
+      // repo: "https://github.com/Fofiuxx/ofertas-vuelos",
     },
     es: {
       title: "TripExpress",
@@ -167,7 +169,9 @@ window.PROJECTS = [
     cover: "assets/img/panel-personal.svg",
     tags: ["JavaScript", "Fetch API", "Webpack", "CSS Grid"],
     links: {
-      repo: "https://github.com/Fofiuxx/panel-personal",
+      // Descomenta en cuanto hagas push del repositorio panel-personal.
+      // Hasta entonces el enlace daría 404.
+      // repo: "https://github.com/Fofiuxx/panel-personal",
     },
     es: {
       title: "Panel de Noticias",
@@ -208,7 +212,9 @@ window.PROJECTS = [
     badge: "course",
     cover: "assets/img/gestor-tareas.svg",
     tags: ["Django", "Python", "SQLite", "Auth"],
-    links: {},
+    links: {
+      repo: "https://github.com/Fofiuxx/Proyectos-Python/tree/main/Python/App%20Web%20de%20Tareas%20Pendientes",
+    },
     es: {
       title: "Gestor de Tareas",
       tagline: "Aplicación web con cuentas de usuario donde cada quien ve solo sus propias tareas.",
@@ -248,7 +254,9 @@ window.PROJECTS = [
     badge: "course",
     cover: "assets/img/reconocimiento-facial.svg",
     tags: ["Python", "OpenCV", "face_recognition", "NumPy"],
-    links: {},
+    links: {
+      repo: "https://github.com/Fofiuxx/Proyectos-Python/tree/main/Python/Controlador%20de%20Asistencia",
+    },
     es: {
       title: "Control de Asistencia Facial",
       tagline: "Reconoce al empleado por la cámara web y le marca la hora de entrada solo.",
@@ -290,7 +298,9 @@ window.PROJECTS = [
     badge: "course",
     cover: "assets/img/pedidos-restaurante.svg",
     tags: ["Python", "Tkinter", "GUI"],
-    links: {},
+    links: {
+      repo: "https://github.com/Fofiuxx/Proyectos-Python/tree/main/Python/Gestor%20de%20Restaurantes",
+    },
     es: {
       title: "Sistema de Pedidos",
       tagline: "Toma la orden, calcula impuestos e imprime el recibo. El abuelo de mi POS actual.",
@@ -332,7 +342,9 @@ window.PROJECTS = [
     badge: "course",
     cover: "assets/img/invasion-espacial.svg",
     tags: ["Python", "Pygame", "Colisiones"],
-    links: {},
+    links: {
+      repo: "https://github.com/Fofiuxx/Proyectos-Python/tree/main/Python/Juego%20Invasion%20Espacial",
+    },
     es: {
       title: "Invasión Espacial",
       tagline: "Arcade clásico: ocho enemigos que bajan, una nave, y un puntaje que subir.",
