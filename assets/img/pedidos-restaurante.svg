@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Sistema de pedidos para restaurante">
+  <defs>
+    <linearGradient id="prBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2b2113"/>
+      <stop offset="100%" stop-color="#14100a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#prBg)"/>
+  <circle cx="90" cy="40" r="240" fill="#d29922" fill-opacity="0.10"/>
+
+  <!-- ventana de la app -->
+  <g transform="translate(56 52)">
+    <rect width="688" height="346" rx="10" fill="#1d1810" stroke="#3a3020" stroke-width="1.5"/>
+    <path d="M0 10a10 10 0 0 1 10-10h668a10 10 0 0 1 10 10v24H0z" fill="#2a2317"/>
+    <rect x="16" y="11" width="120" height="12" rx="6" fill="#d29922" fill-opacity="0.6"/>
+
+    <!-- panel del menú: tres columnas de casillas -->
+    <g transform="translate(20 50)">
+      <rect width="212" height="180" rx="8" fill="#241d12" stroke="#3a3020"/>
+      <rect x="14" y="14" width="70" height="10" rx="5" fill="#d29922" fill-opacity="0.75"/>
+      <g>
+        <rect x="14" y="38" width="13" height="13" rx="3" fill="#d29922"/>
+        <path d="M17 44.5l3 3 5.5-6" stroke="#1d1810" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <rect x="35" y="40" width="86" height="9" rx="4.5" fill="#c9bda4" fill-opacity="0.5"/>
+        <rect x="160" y="37" width="38" height="15" rx="3" fill="#161209" stroke="#3a3020"/>
+      </g>
+      <g>
+        <rect x="14" y="64" width="13" height="13" rx="3" fill="#d29922"/>
+        <path d="M17 70.5l3 3 5.5-6" stroke="#1d1810" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <rect x="35" y="66" width="70" height="9" rx="4.5" fill="#c9bda4" fill-opacity="0.5"/>
+        <rect x="160" y="63" width="38" height="15" rx="3" fill="#161209" stroke="#3a3020"/>
+      </g>
+      <g opacity="0.45">
+        <rect x="14" y="90" width="13" height="13" rx="3" fill="none" stroke="#5b4d33" stroke-width="1.6"/>
+        <rect x="35" y="92" width="94" height="9" rx="4.5" fill="#c9bda4" fill-opacity="0.35"/>
+        <rect x="160" y="89" width="38" height="15" rx="3" fill="#161209" stroke="#3a3020"/>
+      </g>
+      <g opacity="0.45">
+        <rect x="14" y="116" width="13" height="13" rx="3" fill="none" stroke="#5b4d33" stroke-width="1.6"/>
+        <rect x="35" y="118" width="60" height="9" rx="4.5" fill="#c9bda4" fill-opacity="0.35"/>
+        <rect x="160" y="115" width="38" height="15" rx="3" fill="#161209" stroke="#3a3020"/>
+      </g>
+      <g opacity="0.45">
+        <rect x="14" y="142" width="13" height="13" rx="3" fill="none" stroke="#5b4d33" stroke-width="1.6"/>
+        <rect x="35" y="144" width="80" height="9" rx="4.5" fill="#c9bda4" fill-opacity="0.35"/>
+        <rect x="160" y="141" width="38" height="15" rx="3" fill="#161209" stroke="#3a3020"/>
+      </g>
+    </g>
+
+    <!-- calculadora -->
+    <g transform="translate(248 50)">
+      <rect width="130" height="180" rx="8" fill="#241d12" stroke="#3a3020"/>
+      <rect x="12" y="12" width="106" height="26" rx="4" fill="#161209" stroke="#3a3020"/>
+      <rect x="76" y="21" width="34" height="8" rx="4" fill="#d29922" fill-opacity="0.8"/>
+      <g fill="#2f2717">
+        <rect x="12" y="48" width="24" height="24" rx="4"/><rect x="40" y="48" width="24" height="24" rx="4"/>
+        <rect x="68" y="48" width="24" height="24" rx="4"/><rect x="96" y="48" width="22" height="24" rx="4" fill="#d29922" fill-opacity="0.35"/>
+        <rect x="12" y="76" width="24" height="24" rx="4"/><rect x="40" y="76" width="24" height="24" rx="4"/>
+        <rect x="68" y="76" width="24" height="24" rx="4"/><rect x="96" y="76" width="22" height="24" rx="4" fill="#d29922" fill-opacity="0.35"/>
+        <rect x="12" y="104" width="24" height="24" rx="4"/><rect x="40" y="104" width="24" height="24" rx="4"/>
+        <rect x="68" y="104" width="24" height="24" rx="4"/><rect x="96" y="104" width="22" height="24" rx="4" fill="#d29922" fill-opacity="0.35"/>
+        <rect x="12" y="132" width="52" height="24" rx="4"/><rect x="68" y="132" width="24" height="24" rx="4"/>
+        <rect x="96" y="132" width="22" height="24" rx="4" fill="#d29922" fill-opacity="0.6"/>
+      </g>
+    </g>
+
+    <!-- recibo -->
+    <g transform="translate(394 50)">
+      <rect width="274" height="180" rx="6" fill="#f1e9d8"/>
+      <rect x="18" y="16" width="90" height="8" rx="4" fill="#14100a" fill-opacity="0.75"/>
+      <rect x="186" y="16" width="70" height="8" rx="4" fill="#14100a" fill-opacity="0.4"/>
+      <path d="M18 34h238" stroke="#14100a" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <g fill="#14100a" fill-opacity="0.5">
+        <rect x="18" y="46" width="96" height="7" rx="3.5"/><rect x="180" y="46" width="26" height="7" rx="3.5"/><rect x="224" y="46" width="32" height="7" rx="3.5"/>
+        <rect x="18" y="62" width="118" height="7" rx="3.5"/><rect x="180" y="62" width="26" height="7" rx="3.5"/><rect x="224" y="62" width="32" height="7" rx="3.5"/>
+        <rect x="18" y="78" width="80" height="7" rx="3.5"/><rect x="180" y="78" width="26" height="7" rx="3.5"/><rect x="224" y="78" width="32" height="7" rx="3.5"/>
+        <rect x="18" y="94" width="104" height="7" rx="3.5"/><rect x="180" y="94" width="26" height="7" rx="3.5"/><rect x="224" y="94" width="32" height="7" rx="3.5"/>
+      </g>
+      <path d="M18 112h238" stroke="#14100a" stroke-opacity="0.25" stroke-width="1.5"/>
+      <g fill="#14100a" fill-opacity="0.45">
+        <rect x="18" y="122" width="56" height="7" rx="3.5"/><rect x="212" y="122" width="44" height="7" rx="3.5"/>
+        <rect x="18" y="138" width="48" height="7" rx="3.5"/><rect x="212" y="138" width="44" height="7" rx="3.5"/>
+      </g>
+      <rect x="18" y="156" width="44" height="10" rx="5" fill="#14100a" fill-opacity="0.8"/>
+      <rect x="200" y="156" width="56" height="10" rx="5" fill="#b8860b"/>
+    </g>
+
+    <!-- botonera -->
+    <g transform="translate(20 248)">
+      <rect width="152" height="34" rx="6" fill="#d29922" fill-opacity="0.85"/>
+      <rect x="52" y="13" width="48" height="8" rx="4" fill="#1d1810" fill-opacity="0.75"/>
+      <rect x="164" width="152" height="34" rx="6" fill="#2f2717" stroke="#3a3020"/>
+      <rect x="216" y="13" width="48" height="8" rx="4" fill="#c9bda4" fill-opacity="0.5"/>
+      <rect x="328" width="152" height="34" rx="6" fill="#2f2717" stroke="#3a3020"/>
+      <rect x="380" y="13" width="48" height="8" rx="4" fill="#c9bda4" fill-opacity="0.5"/>
+      <rect x="492" width="152" height="34" rx="6" fill="#2f2717" stroke="#3a3020"/>
+      <rect x="544" y="13" width="48" height="8" rx="4" fill="#c9bda4" fill-opacity="0.5"/>
+    </g>
+  </g>
+
+  <text x="56" y="428" font-family="ui-monospace, Consolas, monospace" font-size="17"
+        fill="#d29922" fill-opacity="0.75" letter-spacing="3">TKINTER · RECIBOS</text>
+</svg>

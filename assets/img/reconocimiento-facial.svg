@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Reconocimiento facial">
+  <defs>
+    <linearGradient id="rfBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1230"/>
+      <stop offset="100%" stop-color="#0b0f1a"/>
+    </linearGradient>
+    <linearGradient id="rfScan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#rfBg)"/>
+
+  <!-- rejilla de puntos -->
+  <g fill="#a78bfa" fill-opacity="0.12">
+    <circle cx="60" cy="60" r="2"/><circle cx="140" cy="60" r="2"/><circle cx="220" cy="60" r="2"/>
+    <circle cx="60" cy="140" r="2"/><circle cx="140" cy="140" r="2"/><circle cx="220" cy="140" r="2"/>
+    <circle cx="60" cy="220" r="2"/><circle cx="140" cy="220" r="2"/><circle cx="220" cy="220" r="2"/>
+    <circle cx="60" cy="300" r="2"/><circle cx="140" cy="300" r="2"/><circle cx="220" cy="300" r="2"/>
+    <circle cx="60" cy="380" r="2"/><circle cx="140" cy="380" r="2"/><circle cx="220" cy="380" r="2"/>
+  </g>
+
+  <!-- marco de cámara -->
+  <g transform="translate(268 58)" stroke="#a78bfa" fill="none" stroke-width="4" stroke-linecap="round">
+    <path d="M0 40V10a10 10 0 0 1 10-10h30"/>
+    <path d="M224 0h30a10 10 0 0 1 10 10v30"/>
+    <path d="M264 294v30a10 10 0 0 1-10 10h-30"/>
+    <path d="M40 334H10a10 10 0 0 1-10-10v-30"/>
+  </g>
+
+  <!-- rostro con malla -->
+  <g transform="translate(400 224)">
+    <ellipse rx="86" ry="106" fill="#211a3a" stroke="#4c3f75" stroke-width="2"/>
+    <path d="M-86 -14q86 34 172 0" fill="none" stroke="#a78bfa" stroke-opacity="0.35" stroke-width="1.5"/>
+    <path d="M-86 24q86 34 172 0" fill="none" stroke="#a78bfa" stroke-opacity="0.35" stroke-width="1.5"/>
+    <path d="M-86 -52q86 26 172 0" fill="none" stroke="#a78bfa" stroke-opacity="0.35" stroke-width="1.5"/>
+    <path d="M0 -106v212" stroke="#a78bfa" stroke-opacity="0.3" stroke-width="1.5"/>
+    <path d="M-44 -100v196M44 -100v196" stroke="#a78bfa" stroke-opacity="0.22" stroke-width="1.5"/>
+
+    <!-- puntos de referencia -->
+    <g fill="#c4b5fd">
+      <circle cx="-34" cy="-24" r="4"/><circle cx="34" cy="-24" r="4"/>
+      <circle cx="0" cy="6" r="4"/><circle cx="-26" cy="46" r="4"/>
+      <circle cx="26" cy="46" r="4"/><circle cx="0" cy="52" r="4"/>
+      <circle cx="-58" cy="-40" r="3"/><circle cx="58" cy="-40" r="3"/>
+      <circle cx="-52" cy="60" r="3"/><circle cx="52" cy="60" r="3"/>
+      <circle cx="0" cy="-78" r="3"/><circle cx="0" cy="88" r="3"/>
+    </g>
+    <g stroke="#a78bfa" stroke-opacity="0.6" stroke-width="1.2" fill="none">
+      <path d="M-58 -40l24 16 34 0 24-16"/>
+      <path d="M-34 -24L0 6l34-30"/>
+      <path d="M-26 46L0 52l26-6"/>
+      <path d="M-52 60L-26 46M52 60L26 46"/>
+      <path d="M0 -78l-58 38M0 -78l58 38"/>
+      <path d="M-52 60L0 88l52-28"/>
+    </g>
+  </g>
+
+  <!-- línea de escaneo -->
+  <rect x="268" y="150" width="264" height="70" fill="url(#rfScan)"/>
+  <rect x="268" y="218" width="264" height="3" fill="#c4b5fd" fill-opacity="0.9"/>
+
+  <!-- resultado -->
+  <g transform="translate(556 296)">
+    <rect width="196" height="58" rx="9" fill="#0f1a14" stroke="#3fb950" stroke-width="1.5"/>
+    <circle cx="30" cy="29" r="13" fill="#3fb950"/>
+    <path d="M24 29l4.5 5 9-10" stroke="#0f1a14" stroke-width="2.6" fill="none"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="54" y="16" width="88" height="9" rx="4.5" fill="#e8edf5" fill-opacity="0.8"/>
+    <rect x="54" y="33" width="60" height="8" rx="4" fill="#3fb950" fill-opacity="0.6"/>
+  </g>
+
+  <text x="48" y="418" font-family="ui-monospace, Consolas, monospace" font-size="17"
+        fill="#a78bfa" fill-opacity="0.75" letter-spacing="3">OPENCV · 128-D ENCODING</text>
+</svg>

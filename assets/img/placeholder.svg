@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Proyecto">
+  <defs>
+    <linearGradient id="phBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a2331"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#phBg)"/>
+  <g stroke="#4f9dff" stroke-opacity="0.1" stroke-width="1">
+    <path d="M0 112h800M0 225h800M0 337h800"/>
+    <path d="M160 0v450M320 0v450M480 0v450M640 0v450"/>
+  </g>
+  <g transform="translate(400 225)" fill="none" stroke="#4f9dff" stroke-opacity="0.5"
+     stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-52 -26l-34 26 34 26"/>
+    <path d="M52 -26l34 26-34 26"/>
+    <path d="M14 -44l-28 88"/>
+  </g>
+</svg>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rodolfo Cruz — Proyectos</title>
+  <meta name="description" content="Portafolio de proyectos de Rodolfo Cruz: software de facturación electrónica, videojuegos y herramientas.">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- Vista previa al compartir el enlace.
+       og:image tiene que ser JPG o PNG con URL absoluta: las redes sociales
+       no renderizan SVG ni resuelven rutas relativas. Cambia el dominio de
+       abajo por el tuyo cuando publiques. -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://TU-USUARIO.github.io/portfolio/">
+  <meta property="og:title" content="Rodolfo Cruz — Proyectos">
+  <meta property="og:description" content="Portafolio de proyectos: facturación electrónica, videojuegos y herramientas.">
+  <meta property="og:image" content="https://TU-USUARIO.github.io/portfolio/assets/img/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">RC</span>
+        <span class="brand-name">Rodolfo Cruz</span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+        <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang="es" class="is-active">ES</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <button type="button" id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Desarrollador de software · Costa Rica</p>
+        <h1 class="hero-title" data-i18n="hero.title">Construyo software que se usa todos los días.</h1>
+        <p class="hero-lead" data-i18n="hero.lead">
+          Sistemas de facturación electrónica, videojuegos y herramientas internas.
+          Me interesa el detalle: que funcione sin internet, que no pierda datos y que se sienta bien de usar.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#proyectos" data-i18n="hero.cta">Ver proyectos</a>
+          <a class="btn btn-ghost" href="mailto:rcquiros04@gmail.com" data-i18n="hero.contact">Escríbeme</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proyectos">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 data-i18n="projects.title">Proyectos</h2>
+          <p class="section-sub" data-i18n="projects.sub">Una selección de lo que he construido.</p>
+        </div>
+
+        <div class="filters" id="filters" role="group" aria-label="Filtrar proyectos"></div>
+
+        <div class="grid" id="project-grid"></div>
+        <p class="empty" id="empty-state" hidden data-i18n="projects.empty">No hay proyectos en esta categoría.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="sobre-mi">
+      <div class="wrap about">
+        <div class="about-text">
+          <h2 data-i18n="about.title">Sobre mí</h2>
+          <p data-i18n="about.p1">
+            Soy Rodolfo Cruz, desarrollador en Costa Rica. Trabajo sobre todo en el backend y en los
+            puntos donde el software toca el mundo real: impresoras térmicas, firmas digitales,
+            APIs de Hacienda, dispositivos que tienen que seguir funcionando cuando se cae el internet.
+          </p>
+          <p data-i18n="about.p2">
+            También hago videojuegos por mi cuenta, que es donde practico lo que no cabe en un
+            proyecto de cliente: audio, iluminación, shaders y diseño de sistemas.
+          </p>
+        </div>
+        <div class="about-stack">
+          <h3 data-i18n="about.stackTitle">Herramientas</h3>
+          <ul class="chips" id="stack-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="wrap contact">
+        <h2 data-i18n="contact.title">Contacto</h2>
+        <p data-i18n="contact.sub">¿Un proyecto en mente o una pregunta? Escríbeme.</p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:rcquiros04@gmail.com">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">rcquiros04@gmail.com</span>
+          </a>
+          <a class="contact-link" href="https://github.com/TU-USUARIO" target="_blank" rel="noopener">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/TU-USUARIO</span>
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/TU-USUARIO</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> Rodolfo Cruz</p>
+      <p class="footer-note" data-i18n="footer.note">Hecho con HTML, CSS y JavaScript. Sin frameworks.</p>
+    </div>
+  </footer>
+
+  <!-- Detalle de proyecto -->
+  <dialog class="modal" id="project-modal" aria-labelledby="modal-title">
+    <button type="button" class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
+    <div class="modal-body" id="modal-body"></div>
+  </dialog>
+
+  <script src="js/projects.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

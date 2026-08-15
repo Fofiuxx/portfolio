@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Rodolfo Cruz — Proyectos">
+  <defs>
+    <linearGradient id="ogBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#131c2b"/>
+      <stop offset="100%" stop-color="#0b0f16"/>
+    </linearGradient>
+    <radialGradient id="ogGlow" cx="0.15" cy="0" r="0.9">
+      <stop offset="0%" stop-color="#4f9dff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#4f9dff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+  <rect width="1200" height="630" fill="url(#ogGlow)"/>
+  <g stroke="#4f9dff" stroke-opacity="0.07" stroke-width="1">
+    <path d="M0 157h1200M0 315h1200M0 472h1200"/>
+    <path d="M240 0v630M480 0v630M720 0v630M960 0v630"/>
+  </g>
+  <rect x="96" y="96" width="72" height="72" rx="20" fill="#4f9dff"/>
+  <text x="132" y="146" text-anchor="middle" font-family="system-ui, Segoe UI, Arial, sans-serif"
+        font-size="30" font-weight="700" fill="#fff">RC</text>
+  <text x="96" y="330" font-family="system-ui, Segoe UI, Arial, sans-serif"
+        font-size="76" font-weight="700" fill="#e8edf5" letter-spacing="-2">Rodolfo Cruz</text>
+  <text x="96" y="400" font-family="system-ui, Segoe UI, Arial, sans-serif"
+        font-size="34" fill="#9aa7bd">Desarrollador de software · Costa Rica</text>
+  <text x="96" y="500" font-family="ui-monospace, Consolas, monospace"
+        font-size="24" fill="#4f9dff" fill-opacity="0.8" letter-spacing="4">PROYECTOS</text>
+</svg>
