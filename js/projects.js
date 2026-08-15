@@ -120,9 +120,7 @@ window.PROJECTS = [
     cover: "assets/img/ofertas-vuelos.svg",
     tags: ["Node.js", "Express", "MySQL", "JWT", "bcrypt"],
     links: {
-      // Descomenta en cuanto hagas push del repositorio ofertas-vuelos.
-      // Hasta entonces el enlace daría 404.
-      // repo: "https://github.com/Fofiuxx/ofertas-vuelos",
+      repo: "https://github.com/Fofiuxx/ofertas-vuelos",
     },
     es: {
       title: "TripExpress",
@@ -169,9 +167,7 @@ window.PROJECTS = [
     cover: "assets/img/panel-personal.svg",
     tags: ["JavaScript", "Fetch API", "Webpack", "CSS Grid"],
     links: {
-      // Descomenta en cuanto hagas push del repositorio panel-personal.
-      // Hasta entonces el enlace daría 404.
-      // repo: "https://github.com/Fofiuxx/panel-personal",
+      repo: "https://github.com/Fofiuxx/panel-personal",
     },
     es: {
       title: "Panel de Noticias",
