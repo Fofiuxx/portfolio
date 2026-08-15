@@ -33,6 +33,7 @@ window.I18N = {
 
     "badge.course": "Proyecto de curso",
     "badge.client": "Trabajo para cliente",
+    "badge.team": "Proyecto en equipo",
 
     "about.title": "Sobre mí",
     "about.p1": "Soy Rodolfo Cruz, desarrollador en Costa Rica. Trabajo sobre todo en el backend y en los puntos donde el software toca el mundo real: impresoras térmicas, firmas digitales, APIs de Hacienda, dispositivos que tienen que seguir funcionando cuando se cae el internet.",
@@ -84,6 +85,7 @@ window.I18N = {
 
     "badge.course": "Course project",
     "badge.client": "Client work",
+    "badge.team": "Team project",
 
     "about.title": "About me",
     "about.p1": "I'm Rodolfo Cruz, a developer based in Costa Rica. I work mostly on the backend and at the points where software meets the physical world: thermal printers, digital signatures, tax authority APIs, devices that have to keep running when the internet goes down.",

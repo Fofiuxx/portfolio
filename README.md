@@ -33,7 +33,7 @@ Abre `js/projects.js`. Al final hay una plantilla comentada: cópiala, quita los
   featured: false,                // true = aparece de primero
   cover: "assets/img/mi.png",     // 16:9 se ve mejor
   tags: ["Python", "CLI"],
-  badge: "course",                // opcional: "course" | "client". Bórralo si es tuyo
+  badge: "course",                // opcional: "course" | "team" | "client". Bórralo si es solo tuyo
   links: { repo: "https://github.com/Fofiuxx/mi-proyecto" },
   es: { title, tagline, description, highlights: [] },
   en: { title, tagline, description, highlights: [] }

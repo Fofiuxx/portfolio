@@ -16,8 +16,9 @@
      cover     ruta a la imagen de portada (16:9 se ve mejor)
      tags      tecnologías, aparecen como etiquetas
      badge     opcional: "course" = práctica de curso
+                          "team"   = desarrollado en equipo
                           "client" = trabajo para cliente
-               Bórralo si el proyecto es original tuyo.
+               Bórralo si el proyecto es original y solo tuyo.
      links     { repo, demo, docs } — borra los que no tengas
      es / en   los textos en cada idioma
    ============================================================ */
@@ -116,6 +117,7 @@ window.PROJECTS = [
     status: "shipped",
     category: "web",
     featured: true,
+    badge: "team",
     cover: "assets/img/frutos-terraba.svg",
     tags: ["C#", "ASP.NET Core", "Entity Framework", "SQL Server", "QuestPDF"],
     links: {
@@ -125,11 +127,11 @@ window.PROJECTS = [
       title: "Frutos del Terrabá",
       tagline: "Sistema de gestión agrícola: inventario, pedidos, proveedores, distribución y reportes en PDF.",
       description:
-        "Sistema de gestión para una distribuidora de productos agrícolas, construido en ASP.NET Core " +
-        "como dos aplicaciones separadas: una API REST que es la única que habla con la base de datos, " +
-        "y una aplicación web MVC que la consume por HTTP. Cubre el ciclo completo — catálogo de " +
-        "productos y categorías, proveedores, control de inventario, pedidos con sus líneas de detalle, " +
-        "distribución, y un panel con indicadores.",
+        "Sistema de gestión para una distribuidora de productos agrícolas, desarrollado en equipo " +
+        "sobre ASP.NET Core. Son dos aplicaciones separadas: una API REST que es la única que habla " +
+        "con la base de datos, y una aplicación web MVC que la consume por HTTP. Cubre el ciclo " +
+        "completo — catálogo de productos y categorías, proveedores, control de inventario, pedidos " +
+        "con sus líneas de detalle, distribución, y un panel con indicadores.",
       highlights: [
         "La web no toca la base de datos: consume su propia API por HTTP, así que el día que haya una app móvil consume la misma.",
         "Capa de servicios detrás de interfaces e inyectada por el contenedor, lo que permite sustituirla en pruebas sin levantar la base de datos.",
@@ -142,10 +144,11 @@ window.PROJECTS = [
       title: "Frutos del Terrabá",
       tagline: "Agricultural management system: inventory, orders, suppliers, distribution and PDF reports.",
       description:
-        "A management system for an agricultural produce distributor, built on ASP.NET Core as two " +
-        "separate applications: a REST API that is the only thing talking to the database, and an MVC " +
-        "web app that consumes it over HTTP. It covers the full cycle — product and category catalog, " +
-        "suppliers, inventory control, orders with their line items, distribution, and a metrics dashboard.",
+        "A management system for an agricultural produce distributor, built by a team on ASP.NET Core. " +
+        "It is two separate applications: a REST API that is the only thing talking to the database, " +
+        "and an MVC web app that consumes it over HTTP. It covers the full cycle — product and category " +
+        "catalog, suppliers, inventory control, orders with their line items, distribution, and a " +
+        "metrics dashboard.",
       highlights: [
         "The web app never touches the database: it consumes its own API over HTTP, so a future mobile app would consume the very same one.",
         "A service layer behind interfaces, injected by the container, which makes it swappable in tests without standing up a database.",
