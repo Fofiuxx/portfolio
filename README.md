@@ -34,8 +34,7 @@ Abre `js/projects.js`. Al final hay una plantilla comentada: cópiala, quita los
   cover: "assets/img/mi.png",     // 16:9 se ve mejor
   tags: ["Python", "CLI"],
   badge: "course",                // opcional: "course" | "client". Bórralo si es tuyo
-
-  links: { repo: "https://github.com/usuario/mi-proyecto" },
+  links: { repo: "https://github.com/Fofiuxx/mi-proyecto" },
   es: { title, tagline, description, highlights: [] },
   en: { title, tagline, description, highlights: [] }
 }
@@ -50,20 +49,18 @@ Si aún no tienes imagen, usa `assets/img/placeholder.svg`.
 
 ---
 
-## Antes de publicar: rellena tus datos
+## Pendiente antes de publicar
 
-En `index.html` hay cinco marcadores `TU-USUARIO`. Búscalos y cámbialos:
+Queda **un** marcador en `index.html`, en la sección de contacto:
+`TU-USUARIO-LINKEDIN`. Ponlo o borra ese bloque `<a class="contact-link">`
+entero — un enlace roto es peor que no tener el enlace.
 
-- **Dos en el `<head>`**, en `og:url` y `og:image`. Son la vista previa que
-  aparece cuando compartes el enlace en WhatsApp, LinkedIn o Twitter. Tienen que
-  llevar la **URL completa** de tu sitio: las redes sociales no resuelven rutas
-  relativas, así que si las dejas mal el enlace se comparte sin imagen.
-- **Tres en la sección de contacto**, en GitHub y LinkedIn. Cámbialos por tus
-  usuarios reales, o borra el bloque `<a class="contact-link">` completo si no
-  quieres ese enlace.
+Todo lo demás ya apunta a `Fofiuxx`.
 
-La imagen de vista previa es `assets/img/og-cover.jpg` (1200×630). Si cambias tu
-nombre o el título del sitio, acuérdate de regenerarla.
+> Si algún día cambias de dominio, hay dos URL absolutas en el `<head>`
+> (`og:url` y `og:image`) que hay que actualizar a mano. Son la vista previa
+> que sale al compartir el enlace en WhatsApp o LinkedIn, y las redes sociales
+> no resuelven rutas relativas.
 
 ---
 
@@ -86,20 +83,14 @@ GitHub Pages es hosting web gratuito: sube los archivos a un repositorio y GitHu
 te da una dirección pública real, con HTTPS incluido.
 
 **1. Crea el repositorio.** En <https://github.com/new>, nómbralo `portfolio`
-y déjalo **público** (Pages gratis requiere repositorio público).
+y déjalo **público** (Pages gratis requiere repositorio público). No marques
+ninguna casilla de README ni .gitignore: el repositorio local ya los tiene.
 
-**2. Sube los archivos.** Desde la carpeta `portfolio`:
-
-```bash
-git init -b main
-```
+**2. Súbelo.** El repositorio local ya está iniciado y con su primer commit,
+así que solo faltan estos dos comandos:
 
 ```bash
-git add . && git commit -m "Portafolio inicial"
-```
-
-```bash
-git remote add origin https://github.com/TU-USUARIO/portfolio.git
+git remote add origin https://github.com/Fofiuxx/portfolio.git
 ```
 
 ```bash
@@ -112,21 +103,22 @@ git push -u origin main
 **4. Espera un minuto.** Tu sitio queda en:
 
 ```
-https://TU-USUARIO.github.io/portfolio/
+https://fofiuxx.github.io/portfolio/
 ```
 
 Cada `git push` posterior actualiza el sitio automáticamente.
 
-### Que la dirección sea solo `tuusuario.github.io`
+### Que la dirección sea solo `fofiuxx.github.io`
 
-Nombra el repositorio exactamente `TU-USUARIO.github.io` en vez de `portfolio`.
-Es la misma configuración; solo cambia el nombre.
+Nombra el repositorio exactamente `Fofiuxx.github.io` en vez de `portfolio`.
+Es la misma configuración, solo cambia el nombre — pero acuérdate de quitar
+`/portfolio` de las dos URL del `<head>`.
 
 ### Dominio propio
 
 Si compras un dominio, en **Settings → Pages → Custom domain** lo escribes,
 y en tu proveedor de dominio apuntas un registro `CNAME` a
-`TU-USUARIO.github.io`. GitHub emite el certificado HTTPS gratis.
+`fofiuxx.github.io`. GitHub emite el certificado HTTPS gratis.
 
 ---
 

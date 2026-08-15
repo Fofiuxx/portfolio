@@ -120,7 +120,7 @@ window.PROJECTS = [
     cover: "assets/img/ofertas-vuelos.svg",
     tags: ["Node.js", "Express", "MySQL", "JWT", "bcrypt"],
     links: {
-      // repo: "https://github.com/TU-USUARIO/ofertas-vuelos"
+      repo: "https://github.com/Fofiuxx/ofertas-vuelos",
     },
     es: {
       title: "TripExpress",
@@ -167,7 +167,7 @@ window.PROJECTS = [
     cover: "assets/img/panel-personal.svg",
     tags: ["JavaScript", "Fetch API", "Webpack", "CSS Grid"],
     links: {
-      // repo: "https://github.com/TU-USUARIO/panel-personal"
+      repo: "https://github.com/Fofiuxx/panel-personal",
     },
     es: {
       title: "Panel de Noticias",
