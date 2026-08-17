@@ -32,7 +32,7 @@ window.PROJECTS = [
     category: "web",
     featured: true,
     cover: "assets/img/facturacion-cr.svg",
-    tags: ["Node.js", "TypeScript", "Monorepo", "XAdES", "SQLite"],
+    tags: ["Node.js", "SQLite", "XAdES", "ESC/POS", "TLS"],
     links: {
       // repo: "https://github.com/TU-USUARIO/facturacion-cr",
       // demo: "https://ejemplo.com"
@@ -41,30 +41,39 @@ window.PROJECTS = [
       title: "Facturación Electrónica CR",
       tagline: "Punto de venta y facturación para Hacienda, pensado para restaurantes que no pueden parar.",
       description:
-        "Sistema de punto de venta con facturación electrónica conforme a la normativa de Hacienda de Costa Rica. " +
-        "La decisión que define la arquitectura es que el servidor corre dentro del local, no en la nube: si se cae " +
-        "el internet, las tablets siguen viéndose por el WiFi del restaurante y el negocio no se detiene. Lo único " +
-        "que se corta es el envío a Hacienda, que se reintenta después.",
+        "Punto de venta con facturación electrónica conforme a la normativa de Hacienda de Costa Rica, " +
+        "para restaurantes. La decisión que define la arquitectura es que el servidor corre dentro del " +
+        "local, no en la nube: si se cae el internet, las tablets lo siguen viendo por el WiFi del " +
+        "restaurante y el negocio no se detiene. Lo único que se corta es el envío a Hacienda, que se " +
+        "encola y se reintenta. El sistema está completo y probado de punta a punta; queda pendiente la " +
+        "llave de TRIBU-CR para transmitir en producción.",
       highlights: [
-        "El local es el único que escribe; la nube recibe copia en una sola dirección, así que no hay conflictos que resolver.",
-        "Firma digital XAdES resuelta en Node con xadesjs, sin necesidad de un microservicio aparte en Java.",
-        "Impresión térmica de comandas y tiquetes electrónicos.",
-        "La nube guarda el respaldo legal de comprobantes a cinco años y da reportes remotos."
+        "Los comprobantes son inmutables por diseño y la base lo impone: cuatro triggers impiden borrarlos o alterarlos. Un error se corrige con nota de crédito, como manda la ley, no editando el pasado.",
+        "Sin credenciales de Hacienda el sistema encola y explica por qué no envió, en vez de dar por aceptado lo que nunca se transmitió.",
+        "Reintentos con espera exponencial, para no quemar intentos contra un servicio que no responde.",
+        "Los respaldos se verifican abriéndolos, no comprobando que el archivo exista; un archivo corrupto se detecta antes de restaurar, no después.",
+        "HTTPS en la red del local con autoridad certificadora propia — Let's Encrypt no sirve para un servidor que a propósito no está en internet.",
+        "Firma XAdES resuelta en Node, sin el microservicio en Java que suele acompañar a este requisito.",
+        "Permisos por rol y arqueo de caja que detecta faltantes, con tres suites de pruebas que cubren precisión del dinero, concurrencia y entradas hostiles."
       ]
     },
     en: {
       title: "Costa Rica E-Invoicing",
       tagline: "Point of sale and tax invoicing built for restaurants that can't afford downtime.",
       description:
-        "A point-of-sale system with electronic invoicing compliant with Costa Rica's tax authority (Hacienda). " +
-        "The defining architectural decision is that the server runs on-site, not in the cloud: when the internet " +
-        "drops, tablets still reach it over the restaurant's WiFi and service continues. The only thing that stops " +
-        "is transmission to the tax authority, which retries later.",
+        "A restaurant point-of-sale with electronic invoicing compliant with Costa Rica's tax authority " +
+        "(Hacienda). The defining architectural decision is that the server runs on-site, not in the " +
+        "cloud: when the internet drops, tablets still reach it over the restaurant's WiFi and service " +
+        "continues. The only thing that stops is transmission to Hacienda, which queues and retries. " +
+        "The system is complete and tested end to end; it awaits the TRIBU-CR key to transmit in production.",
       highlights: [
-        "The on-site server is the only writer; the cloud mirrors it one-way, so there are no sync conflicts to resolve.",
-        "XAdES digital signing solved in Node with xadesjs — no separate Java microservice needed.",
-        "Thermal printing for kitchen tickets and electronic receipts.",
-        "The cloud holds the five-year legal archive of invoices and powers remote reporting."
+        "Invoices are immutable by design and the database enforces it: four triggers make them impossible to delete or alter. A mistake is corrected with a credit note, as the law requires, not by editing the past.",
+        "Without tax-authority credentials the system queues and reports why it didn't send, rather than marking as accepted something that was never transmitted.",
+        "Retries with exponential backoff, so it doesn't burn attempts against a service that isn't answering.",
+        "Backups are verified by opening them, not by checking the file exists; a corrupted archive is caught before restoring, not after.",
+        "HTTPS on the local network via a self-issued certificate authority — Let's Encrypt is useless for a server deliberately kept off the internet.",
+        "XAdES signing solved in Node, without the Java microservice this requirement usually drags along.",
+        "Role-based permissions and cash reconciliation that catches shortfalls, with three test suites covering money precision, concurrency and hostile input."
       ]
     }
   },
