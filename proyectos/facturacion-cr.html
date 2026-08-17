@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facturación Electrónica CR — Caso de estudio</title>
+  <meta name="description" content="Por qué el servidor de un punto de venta con facturación electrónica va dentro del restaurante y no en la nube.">
+  <meta name="color-scheme" content="dark light">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://fofiuxx.github.io/portfolio/proyectos/facturacion-cr.html">
+  <meta property="og:title" content="Facturación Electrónica CR — Caso de estudio">
+  <meta property="og:description" content="Por qué el servidor va dentro del restaurante y no en la nube.">
+  <meta property="og:image" content="https://fofiuxx.github.io/portfolio/assets/img/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/caso.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html">
+        <span class="brand-mark" aria-hidden="true">RC</span>
+        <span class="brand-name">Rodolfo Cruz</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="../index.html#proyectos" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang="es" class="is-active">ES</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <button type="button" id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="caso">
+    <div class="caso-hero">
+      <a class="volver" href="../index.html#proyectos" data-i18n="volver">Volver a proyectos</a>
+      <p class="eyebrow" data-i18n="c.eyebrow">Caso de estudio · Costa Rica</p>
+      <h1 data-i18n="c.titulo">Un punto de venta que no se detiene cuando se cae el internet</h1>
+      <p class="caso-lead" data-i18n="c.lead">
+        Facturación electrónica ante Hacienda para restaurantes. La decisión que define
+        todo el sistema es dónde vive el servidor — y la respuesta no es la nube.
+      </p>
+      <div class="caso-meta">
+        <div><span data-i18n="c.meta.rol">Rol</span><strong data-i18n="c.meta.rolV">Diseño y desarrollo</strong></div>
+        <div><span data-i18n="c.meta.stack">Stack</span><strong>Node.js · SQLite · XAdES · ESC/POS</strong></div>
+        <div><span data-i18n="c.meta.estado">Estado</span><strong data-i18n="c.meta.estadoV">Completo y probado</strong></div>
+      </div>
+    </div>
+
+    <section>
+      <h2 data-i18n="c.problema.t">El problema</h2>
+      <p data-i18n="c.problema.p1">
+        Un restaurante en Costa Rica está obligado a emitir comprobantes electrónicos y
+        transmitirlos a Hacienda. La tentación es poner todo en la nube: un servidor, unas
+        tablets conectadas, listo.
+      </p>
+      <p data-i18n="c.problema.p2">
+        El problema aparece el día que se cae la fibra. Con el servidor en la nube, las
+        tablets dejan de verse entre sí, los saloneros no pueden tomar pedidos, la caja no
+        puede cobrar y la cocina no recibe comandas. Un corte de internet apaga el negocio
+        entero — y no porque Hacienda esté inalcanzable, sino porque el restaurante perdió
+        la capacidad de hablar consigo mismo.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-i18n="c.decision.t">La decisión: el servidor va en el local</h2>
+      <div class="clave">
+        <p data-i18n="c.decision.clave">
+          Con el servidor dentro del restaurante, perder internet <strong>solo corta a
+          Hacienda</strong>. Los dispositivos se siguen viendo por el WiFi del local: se
+          toman pedidos, se cobra y se imprime igual.
+        </p>
+      </div>
+      <p data-i18n="c.decision.p1">
+        Lo único que se acumula es la transmisión al fisco, que se encola y se drena sola
+        cuando vuelve la conexión. Eso reduce el problema del trabajo sin conexión de
+        «reescribir la aplicación con service workers y almacenamiento en el dispositivo»
+        a «una cola con reintentos» — una fracción del trabajo, y muchísimo menos superficie
+        donde equivocarse.
+      </p>
+
+      <div class="diagrama">
+        <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-labelledby="diag-titulo">
+          <title id="diag-titulo" data-i18n="c.diag.alt">El servidor vive en el restaurante; la nube solo recibe copia y el envío a Hacienda sale del local</title>
+          <defs>
+            <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5"
+                    markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0 0L10 5L0 10z" fill="currentColor"/>
+            </marker>
+          </defs>
+
+          <!-- recinto del local -->
+          <rect x="14" y="30" width="330" height="250" rx="12"
+                fill="none" stroke="currentColor" stroke-opacity="0.28"
+                stroke-width="1.5" stroke-dasharray="7 6"/>
+          <text x="30" y="52" font-size="12" font-weight="700" fill="currentColor"
+                fill-opacity="0.55" letter-spacing="1.5" data-i18n="c.diag.local">EL RESTAURANTE</text>
+
+          <!-- dispositivos -->
+          <g fill="currentColor" fill-opacity="0.08" stroke="currentColor" stroke-opacity="0.4">
+            <rect x="36" y="76" width="58" height="42" rx="6"/>
+            <rect x="36" y="132" width="58" height="42" rx="6"/>
+            <rect x="36" y="188" width="58" height="42" rx="6"/>
+          </g>
+          <g font-size="10" fill="currentColor" fill-opacity="0.75" text-anchor="middle">
+            <text x="65" y="102" data-i18n="c.diag.tablet">Tablets</text>
+            <text x="65" y="158" data-i18n="c.diag.caja">Caja</text>
+            <text x="65" y="214" data-i18n="c.diag.cocina">Cocina</text>
+          </g>
+
+          <!-- servidor local -->
+          <rect x="170" y="118" width="140" height="76" rx="10"
+                fill="currentColor" fill-opacity="0.12"
+                stroke="currentColor" stroke-opacity="0.6" stroke-width="2"/>
+          <text x="240" y="148" font-size="13" font-weight="700" text-anchor="middle"
+                fill="currentColor" data-i18n="c.diag.servidor">Servidor local</text>
+          <text x="240" y="168" font-size="10" text-anchor="middle"
+                fill="currentColor" fill-opacity="0.65" data-i18n="c.diag.escritor">único que escribe</text>
+
+          <!-- enlaces WiFi -->
+          <g stroke="currentColor" stroke-opacity="0.45" stroke-width="1.6" fill="none"
+             marker-end="url(#flecha)" color="currentColor">
+            <path d="M98 97h66"/>
+            <path d="M98 153h66"/>
+            <path d="M98 209h66"/>
+          </g>
+          <text x="131" y="126" font-size="9" text-anchor="middle"
+                fill="currentColor" fill-opacity="0.5" data-i18n="c.diag.wifi">WiFi del local</text>
+
+          <!-- Hacienda -->
+          <rect x="452" y="46" width="140" height="62" rx="10"
+                fill="none" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.8"/>
+          <text x="522" y="73" font-size="12" font-weight="700" text-anchor="middle"
+                fill="currentColor" fill-opacity="0.85">Hacienda</text>
+          <text x="522" y="91" font-size="9.5" text-anchor="middle"
+                fill="currentColor" fill-opacity="0.55" data-i18n="c.diag.cola">cola con reintentos</text>
+
+          <!-- Nube -->
+          <rect x="452" y="200" width="140" height="62" rx="10"
+                fill="none" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.8"/>
+          <text x="522" y="227" font-size="12" font-weight="700" text-anchor="middle"
+                fill="currentColor" fill-opacity="0.85" data-i18n="c.diag.nube">Nube</text>
+          <text x="522" y="245" font-size="9.5" text-anchor="middle"
+                fill="currentColor" fill-opacity="0.55" data-i18n="c.diag.respaldo">respaldo y reportes</text>
+
+          <!-- local -> Hacienda -->
+          <path d="M312 140 C 390 130, 400 88, 446 82" fill="none"
+                stroke="currentColor" stroke-opacity="0.65" stroke-width="2"
+                marker-end="url(#flecha)"/>
+          <text x="376" y="98" font-size="9.5" text-anchor="middle"
+                fill="currentColor" fill-opacity="0.6" data-i18n="c.diag.directo">directo</text>
+
+          <!-- local -> nube (una sola direccion) -->
+          <path d="M312 172 C 390 182, 400 220, 446 228" fill="none"
+                stroke="currentColor" stroke-opacity="0.65" stroke-width="2"
+                marker-end="url(#flecha)"/>
+          <text x="376" y="212" font-size="9.5" text-anchor="middle"
+                fill="currentColor" fill-opacity="0.6" data-i18n="c.diag.unaVia">copia, una vía</text>
+
+          <!-- lo que NO pasa -->
+          <path d="M520 196 L520 116" fill="none" stroke="currentColor"
+                stroke-opacity="0.28" stroke-width="1.6" stroke-dasharray="5 5"/>
+          <g transform="translate(520 156)">
+            <circle r="11" fill="var(--bg)" stroke="currentColor" stroke-opacity="0.4"/>
+            <path d="M-5 -5L5 5M5 -5L-5 5" stroke="currentColor" stroke-opacity="0.65"
+                  stroke-width="2" stroke-linecap="round"/>
+          </g>
+          <text x="608" y="160" font-size="9.5" fill="currentColor" fill-opacity="0.55"
+                data-i18n="c.diag.nunca">la nube nunca transmite</text>
+        </svg>
+      </div>
+      <p class="pie-figura" data-i18n="c.diag.pie">
+        El local es el único que escribe. La nube recibe copia en una sola dirección y
+        nunca aparece en el camino hacia Hacienda.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-i18n="c.estados.t">Tres estados de red, no dos</h2>
+      <p data-i18n="c.estados.p1">
+        «Con internet» y «sin internet» no alcanzan. Hay un tercer caso: hay internet pero
+        la API de Hacienda no responde. Para el usuario los dos últimos se ven igual, pero
+        se distinguen en el dígito de situación de la clave numérica del comprobante.
+      </p>
+      <div class="tabla-envoltura">
+        <table class="tabla-caso">
+          <thead>
+            <tr>
+              <th data-i18n="c.estados.h1">Estado</th>
+              <th data-i18n="c.estados.h2">Qué pasa</th>
+              <th data-i18n="c.estados.h3">Situación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-i18n="c.estados.r1a">En línea</td><td data-i18n="c.estados.r1b">Todo normal</td><td><code>1</code></td></tr>
+            <tr><td data-i18n="c.estados.r2a">Hacienda caído</td><td data-i18n="c.estados.r2b">Hay internet, el fisco no responde</td><td><code>2</code></td></tr>
+            <tr><td data-i18n="c.estados.r3a">Sin internet</td><td data-i18n="c.estados.r3b">Los dispositivos se ven entre sí; Hacienda inalcanzable</td><td><code>3</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="clave">
+        <p data-i18n="c.estados.clave">
+          Confundir esos dos dígitos no es un detalle cosmético: es un <strong>error
+          fiscal</strong>. El comprobante queda mal emitido aunque el cliente reciba su tiquete.
+        </p>
+      </div>
+      <p data-i18n="c.estados.p2">
+        La venta nunca se bloquea. El comprobante se emite, se imprime y se entrega aunque
+        Hacienda esté fuera de alcance — es válido, lleva su clave con la situación marcada.
+        Y la cola es visible en la barra: cuántos comprobantes se emitieron y todavía no
+        llegaron. Si ese contador se esconde, el negocio se entera cuando ya acumuló días.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-i18n="c.escritor.t">Un solo escritor, y por qué</h2>
+      <p data-i18n="c.escritor.p1">
+        La nube no es un servidor primario con el local de respaldo. Ese esquema obliga a
+        sincronización bidireccional con resolución de conflictos, que es de lo más caro y
+        frágil que se puede construir: dos lados escribiendo el mismo dato, y alguien
+        teniendo que decidir quién gana.
+      </p>
+      <div class="clave">
+        <p data-i18n="c.escritor.clave">
+          Regla: <strong>un solo escritor por tipo de dato</strong>. Con todo escribiendo
+          en el local, la sincronización va en una dirección y no hay nada que fusionar.
+        </p>
+      </div>
+      <p data-i18n="c.escritor.p2">
+        Si algún día hace falta editar el menú desde fuera del restaurante, la evolución
+        natural es mover la configuración a la nube — repartir la autoridad por tipo de
+        dato, nunca por dirección, de modo que cada registro conserve un único dueño.
+      </p>
+      <h3 data-i18n="c.escritor.h">Lo que la nube sí aporta</h3>
+      <ul>
+        <li data-i18n="c.escritor.l1">Respaldo de comprobantes: conservarlos cinco años es obligación legal. Si el equipo del local se pierde y no hay respaldo, el problema pasa de técnico a legal.</li>
+        <li data-i18n="c.escritor.l2">Reportes remotos para el dueño, sin tener que estar en el restaurante.</li>
+        <li data-i18n="c.escritor.l3">Base para varios locales, si el negocio crece.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-i18n="c.inmutable.t">Los comprobantes no se editan</h2>
+      <p data-i18n="c.inmutable.p1">
+        Un comprobante emitido es un documento fiscal. Corregir un error editándolo no es
+        una mala práctica: es falsear un registro. La forma correcta es anularlo con una
+        nota de crédito, que deja rastro de qué pasó y cuándo.
+      </p>
+      <p data-i18n="c.inmutable.p2">
+        Eso no se dejó como norma de equipo, que se olvida. Está impuesto por
+        <strong>cuatro triggers en la base de datos</strong>: intentar borrar un comprobante
+        o alterar su monto o sus líneas falla, venga la petición de donde venga. Lo que sí
+        se puede mover es su estado ante Hacienda, que es lo único que legítimamente cambia
+        después de emitido.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-i18n="c.pruebas.t">Cómo sé que funciona</h2>
+      <p data-i18n="c.pruebas.p1">
+        El proyecto trae tres suites. La tercera, <code>qa.js</code>, está escrita para
+        buscar problemas y no para confirmar que las pruebas pasan: prueba precisión del
+        dinero, concurrencia y entradas hostiles.
+      </p>
+      <div class="consola"><span class="cmd">$ node probar.js</span>
+  <span class="ok">ok</span>   no se puede borrar un comprobante — se anula con nota de credito
+  <span class="ok">ok</span>   no se puede alterar el monto — Un comprobante emitido es inmutable
+  <span class="ok">ok</span>   el consecutivo no deja huecos si la transaccion falla
+  <span class="ok">ok</span>   no se puede cobrar dos veces la misma orden
+  <span class="ok">ok</span>   el salonero NO puede cobrar — Un salonero no puede hacer esto
+  <span class="ok">ok</span>   tras salir, el token muere — Sesion vencida o inexistente
+
+<span class="cmd">$ node probar-admin.js</span>
+  <span class="ok">ok</span>   la nota de credito cuenta como devolucion, no como venta
+  <span class="ok">ok</span>   una venta anulada deja la caja como estaba
+  <span class="ok">ok</span>   el arqueo detecta el faltante — ₡-2000
+  <span class="ok">ok</span>   al desactivar una usuaria, su sesion muere
+
+<span class="cmd">$ node qa.js</span>
+  <span class="ok">ok</span>   sin llave cargada, no intenta transmitir
+  <span class="ok">ok</span>   uno con 3 intentos recientes espera
+  <span class="ok">ok</span>   y tras la espera vuelve a intentarse — backoff exponencial
+  <span class="ok">ok</span>   un archivo corrupto se detecta antes de restaurar
+  <span class="ok">ok</span>   restaurado: la clave numerica es la misma
+  <span class="aviso">ojo</span>  estado() hace 1 + 2 consultas por orden abierta.
+       Con 10 mesas esta bien; con 200 habria que juntarlas
+
+  Sin fallas · 1 aviso</div>
+      <p data-i18n="c.pruebas.p2">
+        Ese aviso final está a propósito. Es una consulta que escala mal y todavía no
+        importa — el sistema es para un restaurante con diez mesas, no doscientas. Dejarlo
+        anotado vale más que arreglarlo hoy: cuando el problema llegue, ya está identificado.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-i18n="c.detalles.t">Dos detalles que me gustaron</h2>
+      <h3 data-i18n="c.detalles.h1">No fingir que se transmitió</h3>
+      <p data-i18n="c.detalles.p1">
+        Sin credenciales de Hacienda cargadas, el sistema no intenta transmitir ni marca
+        nada como aceptado. Encola, registra el intento y dice exactamente por qué no envió.
+        Un sistema que da por bueno lo que nunca salió es peor que uno que falla ruidosamente.
+      </p>
+      <h3 data-i18n="c.detalles.h2">HTTPS sin comprar un dominio</h3>
+      <p data-i18n="c.detalles.p2">
+        Las tablets necesitan contexto seguro. Let's Encrypt no sirve: emite para dominios
+        públicos, y este servidor a propósito no está en internet. La salida fue una
+        autoridad certificadora propia, instalada una vez por tablet. Coste: cero.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-i18n="c.estado.t">Estado actual</h2>
+      <ul class="estado-lista">
+        <li><span class="marca marca-si">✓</span><span data-i18n="c.estado.l1">Cobro, firma XAdES, impresión térmica y cola de transmisión, probados de punta a punta.</span></li>
+        <li><span class="marca marca-si">✓</span><span data-i18n="c.estado.l2">Administración: menú, caja con arqueo, notas de crédito, usuarios y permisos por rol.</span></li>
+        <li><span class="marca marca-si">✓</span><span data-i18n="c.estado.l3">Respaldos comprimidos que se verifican abriéndolos y detectan corrupción antes de restaurar.</span></li>
+        <li><span class="marca marca-no">·</span><span data-i18n="c.estado.l4">Falta la llave criptográfica de TRIBU-CR para transmitir en producción. Es un trámite ante Hacienda, no código pendiente.</span></li>
+      </ul>
+    </section>
+
+    <div class="caso-fin">
+      <p data-i18n="c.fin.p">El código es de un cliente y no está publicado. Si querés ver más a fondo cualquier parte, escribime.</p>
+      <a class="btn btn-primary" href="mailto:rcquiros04@gmail.com" data-i18n="c.fin.cta">Escribime</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year"></span> Rodolfo Cruz</p>
+      <p class="footer-note" data-i18n="footer.note">Hecho con HTML, CSS y JavaScript. Sin frameworks.</p>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="caso-facturacion.js"></script>
+</body>
+</html>

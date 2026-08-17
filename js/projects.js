@@ -34,8 +34,7 @@ window.PROJECTS = [
     cover: "assets/img/facturacion-cr.svg",
     tags: ["Node.js", "SQLite", "XAdES", "ESC/POS", "TLS"],
     links: {
-      // repo: "https://github.com/TU-USUARIO/facturacion-cr",
-      // demo: "https://ejemplo.com"
+      caso: "proyectos/facturacion-cr.html",
     },
     es: {
       title: "Facturación Electrónica CR",

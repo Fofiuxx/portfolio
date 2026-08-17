@@ -225,14 +225,18 @@
     }
 
     var links = project.links || {};
-    var linkKeys = ["demo", "repo", "docs"].filter(function (k) { return links[k]; });
+    var linkKeys = ["caso", "demo", "repo", "docs"].filter(function (k) { return links[k]; });
     if (linkKeys.length) {
       var box = el("div", "modal-links");
       linkKeys.forEach(function (key, i) {
         var a = el("a", "btn " + (i === 0 ? "btn-primary" : "btn-ghost"), t("link." + key));
         a.href = links[key];
-        a.target = "_blank";
-        a.rel = "noopener";
+        // El caso de estudio es una página del propio sitio: se abre aquí
+        // mismo, no en una pestaña nueva.
+        if (key !== "caso") {
+          a.target = "_blank";
+          a.rel = "noopener";
+        }
         box.appendChild(a);
       });
       content.appendChild(box);
