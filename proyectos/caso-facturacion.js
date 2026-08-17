@@ -92,8 +92,9 @@
       "c.estado.l3": "Respaldos comprimidos que se verifican abriéndolos y detectan corrupción antes de restaurar.",
       "c.estado.l4": "Falta la llave criptográfica de TRIBU-CR para transmitir en producción. Es un trámite ante Hacienda, no código pendiente.",
 
-      "c.fin.p": "El código es de un cliente y no está publicado. Si querés ver más a fondo cualquier parte, escribime.",
-      "c.fin.cta": "Escribime"
+      "c.fin.p": "El código está publicado. Las llaves, los certificados y las bases de datos quedan fuera del repositorio; los datos sembrados son ficticios.",
+      "c.fin.cta": "Ver el código",
+      "c.fin.cta2": "Escribime"
     },
 
     en: {
@@ -175,8 +176,9 @@
       "c.estado.l3": "Compressed backups that verify themselves by opening and catch corruption before restoring.",
       "c.estado.l4": "Awaiting the TRIBU-CR cryptographic key to transmit in production. That's paperwork with the tax authority, not pending code.",
 
-      "c.fin.p": "The code belongs to a client and isn't published. If you'd like to go deeper on any part of it, get in touch.",
-      "c.fin.cta": "Get in touch"
+      "c.fin.p": "The code is published. Keys, certificates and databases stay out of the repository; the seeded data is fictitious.",
+      "c.fin.cta": "View the code",
+      "c.fin.cta2": "Get in touch"
     }
   };
 

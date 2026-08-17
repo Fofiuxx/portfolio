@@ -35,6 +35,7 @@ window.PROJECTS = [
     tags: ["Node.js", "SQLite", "XAdES", "ESC/POS", "TLS"],
     links: {
       caso: "proyectos/facturacion-cr.html",
+      repo: "https://github.com/Fofiuxx/facturacion-cr",
     },
     es: {
       title: "Facturación Electrónica CR",
