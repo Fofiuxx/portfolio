@@ -42,6 +42,8 @@ window.I18N = {
 
     "contact.title": "Contacto",
     "contact.sub": "¿Un proyecto en mente o una pregunta? Escríbeme.",
+    "contact.copiar": "Copiar",
+    "contact.copiado": "¡Copiado!",
 
     "footer.note": "Hecho con HTML, CSS y JavaScript. Sin frameworks.",
 
@@ -95,6 +97,8 @@ window.I18N = {
 
     "contact.title": "Contact",
     "contact.sub": "Got a project in mind, or a question? Send me a note.",
+    "contact.copiar": "Copy",
+    "contact.copiado": "Copied!",
 
     "footer.note": "Built with HTML, CSS and JavaScript. No frameworks.",
 

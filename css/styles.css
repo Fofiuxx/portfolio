@@ -452,6 +452,38 @@ p { margin: 0 0 1em; }
 }
 .contact-value { color: var(--text); font-size: 0.95rem; word-break: break-all; }
 
+/* Botón de copiar dentro de la tarjeta de correo */
+.contact-link { position: relative; }
+.copiar {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface-hi);
+  color: var(--text-dim);
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s, border-color 0.15s;
+}
+.contact-link:hover .copiar,
+.copiar:focus-visible { opacity: 1; }
+.copiar:hover { color: var(--text); border-color: var(--text-faint); }
+.copiar.copiado {
+  opacity: 1;
+  color: var(--ok);
+  border-color: var(--ok);
+}
+
+/* En pantallas táctiles no hay hover: el botón se ve siempre. */
+@media (hover: none) {
+  .copiar { opacity: 1; }
+}
+
 /* ---------- Pie ---------- */
 
 .site-footer {

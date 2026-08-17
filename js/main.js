@@ -247,6 +247,50 @@
     modalBody.scrollTop = 0;
   }
 
+  /* ---------- copiar el correo ---------- */
+
+  function prepararCopiarCorreo() {
+    var boton = document.getElementById("copiar-correo");
+    if (!boton) return;
+
+    boton.addEventListener("click", function (e) {
+      // El botón vive dentro del enlace mailto: sin esto, copiar
+      // dispararía además el cliente de correo.
+      e.preventDefault();
+      e.stopPropagation();
+
+      var correo = boton.dataset.correo;
+
+      function avisar() {
+        boton.textContent = t("contact.copiado");
+        boton.classList.add("copiado");
+        setTimeout(function () {
+          boton.textContent = t("contact.copiar");
+          boton.classList.remove("copiado");
+        }, 1800);
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(correo).then(avisar, respaldoCopiar);
+      } else {
+        respaldoCopiar();
+      }
+
+      // Navegadores viejos, o páginas sin contexto seguro.
+      function respaldoCopiar() {
+        var campo = document.createElement("textarea");
+        campo.value = correo;
+        campo.setAttribute("readonly", "");
+        campo.style.position = "fixed";
+        campo.style.opacity = "0";
+        document.body.appendChild(campo);
+        campo.select();
+        try { document.execCommand("copy"); avisar(); } catch (err) { /* nada que hacer */ }
+        document.body.removeChild(campo);
+      }
+    });
+  }
+
   /* ---------- sección "Sobre mí" ---------- */
 
   function renderStack() {
@@ -261,6 +305,7 @@
   function init() {
     setTheme(detectTheme());
     renderStack();
+    prepararCopiarCorreo();
     setLang(detectLang());
 
     document.getElementById("year").textContent = new Date().getFullYear();

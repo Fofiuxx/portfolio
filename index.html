@@ -64,7 +64,7 @@
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#proyectos" data-i18n="hero.cta">Ver proyectos</a>
-          <a class="btn btn-ghost" href="mailto:rcquiros04@gmail.com" data-i18n="hero.contact">Escríbeme</a>
+          <a class="btn btn-ghost" href="mailto:rcquiros04@gmail.com?subject=Contacto%20desde%20tu%20portafolio" data-i18n="hero.contact">Escríbeme</a>
         </div>
       </div>
     </section>
@@ -109,9 +109,14 @@
         <h2 data-i18n="contact.title">Contacto</h2>
         <p data-i18n="contact.sub">¿Un proyecto en mente o una pregunta? Escríbeme.</p>
         <div class="contact-links">
-          <a class="contact-link" href="mailto:rcquiros04@gmail.com">
+          <!-- Doble salida: el enlace abre el programa de correo, y el botón
+               copia la dirección para quien no tenga ninguno configurado. -->
+          <a class="contact-link" id="enlace-correo"
+             href="mailto:rcquiros04@gmail.com?subject=Contacto%20desde%20tu%20portafolio">
             <span class="contact-label">Email</span>
             <span class="contact-value">rcquiros04@gmail.com</span>
+            <button type="button" class="copiar" id="copiar-correo"
+                    data-correo="rcquiros04@gmail.com" data-i18n="contact.copiar">Copiar</button>
           </a>
           <a class="contact-link" href="https://github.com/Fofiuxx" target="_blank" rel="noopener">
             <span class="contact-label">GitHub</span>
