@@ -226,6 +226,14 @@
 
     var links = project.links || {};
     var linkKeys = ["demo", "prototipo", "caso", "repo", "docs"].filter(function (k) { return links[k]; });
+
+    // Cuando no hay nada que probar en el navegador, se dice por qué.
+    // Una ausencia sin explicar el visitante la llena con la peor
+    // interpretación: que no funciona.
+    if (project.entorno && !links.demo && !links.prototipo) {
+      content.appendChild(el("h4", null, t("modal.porQue")));
+      content.appendChild(el("p", "nota-entorno", t("entorno." + project.entorno)));
+    }
     if (linkKeys.length) {
       var box = el("div", "modal-links");
       linkKeys.forEach(function (key, i) {

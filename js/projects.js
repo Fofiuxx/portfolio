@@ -19,7 +19,20 @@
                           "team"   = desarrollado en equipo
                           "client" = trabajo para cliente
                Bórralo si el proyecto es original y solo tuyo.
-     links     { repo, demo, docs } — borra los que no tengas
+     entorno   opcional: por qué el proyecto no se puede probar en el
+               navegador. Solo se muestra si no hay demo ni prototipo.
+                 "servidor"   = necesita servidor y base de datos
+                 "escritorio" = es una aplicación de escritorio
+                 "camara"     = necesita cámara web
+                 "desarrollo" = todavía sin build público
+     links     opcional, en este orden de importancia:
+                 demo      corriendo de verdad
+                 prototipo interfaz navegable, sin sistema detrás
+                 caso      página de caso de estudio del propio sitio
+                 repo      código fuente
+                 docs      documentación
+               Borra los que no tengas: un enlace roto es peor que
+               ninguno.
      es / en   los textos en cada idioma
    ============================================================ */
 
@@ -87,6 +100,7 @@ window.PROJECTS = [
     featured: true,
     cover: "assets/img/black-beacon.svg",
     tags: ["Unity", "C#", "URP", "Shaders", "Diseño de audio"],
+    entorno: "desarrollo",
     links: {
       // repo: "https://github.com/TU-USUARIO/black-beacon",
       // demo: "https://tuusuario.itch.io/black-beacon"
@@ -130,6 +144,7 @@ window.PROJECTS = [
     badge: "team",
     cover: "assets/img/frutos-terraba.svg",
     tags: ["C#", "ASP.NET Core", "Entity Framework", "SQL Server", "QuestPDF"],
+    entorno: "servidor",
     links: {
       repo: "https://github.com/Fofiuxx/Proyecto-C-NetCore",
     },
@@ -178,6 +193,7 @@ window.PROJECTS = [
     badge: "course",
     cover: "assets/img/ofertas-vuelos.svg",
     tags: ["Node.js", "Express", "MySQL", "JWT", "bcrypt"],
+    entorno: "servidor",
     links: {
       repo: "https://github.com/Fofiuxx/ofertas-vuelos",
     },
@@ -268,6 +284,7 @@ window.PROJECTS = [
     badge: "course",
     cover: "assets/img/gestor-tareas.svg",
     tags: ["Django", "Python", "SQLite", "Auth"],
+    entorno: "servidor",
     links: {
       repo: "https://github.com/Fofiuxx/Proyectos-Python/tree/main/Python/App%20Web%20de%20Tareas%20Pendientes",
     },
@@ -310,6 +327,7 @@ window.PROJECTS = [
     badge: "course",
     cover: "assets/img/reconocimiento-facial.svg",
     tags: ["Python", "OpenCV", "face_recognition", "NumPy"],
+    entorno: "camara",
     links: {
       repo: "https://github.com/Fofiuxx/Proyectos-Python/tree/main/Python/Controlador%20de%20Asistencia",
     },
@@ -354,6 +372,7 @@ window.PROJECTS = [
     badge: "course",
     cover: "assets/img/pedidos-restaurante.svg",
     tags: ["Python", "Tkinter", "GUI"],
+    entorno: "escritorio",
     links: {
       repo: "https://github.com/Fofiuxx/Proyectos-Python/tree/main/Python/Gestor%20de%20Restaurantes",
     },
@@ -398,6 +417,7 @@ window.PROJECTS = [
     badge: "course",
     cover: "assets/img/invasion-espacial.svg",
     tags: ["Python", "Pygame", "Colisiones"],
+    entorno: "escritorio",
     links: {
       repo: "https://github.com/Fofiuxx/Proyectos-Python/tree/main/Python/Juego%20Invasion%20Espacial",
     },
