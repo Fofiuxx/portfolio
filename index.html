@@ -64,7 +64,11 @@
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#proyectos" data-i18n="hero.cta">Ver proyectos</a>
-          <a class="btn btn-ghost" href="mailto:rcquiros04@gmail.com?subject=Contacto%20desde%20tu%20portafolio" data-i18n="hero.contact">Escríbeme</a>
+          <!-- Lleva a la sección de contacto en vez de abrir mailto: si el
+               visitante no tiene programa de correo, un mailto no hace nada
+               y el botón parece roto. Abajo puede copiar la dirección o
+               abrir Gmail. -->
+          <a class="btn btn-ghost" href="#contacto" data-i18n="hero.contact">Escríbeme</a>
         </div>
       </div>
     </section>
@@ -109,15 +113,20 @@
         <h2 data-i18n="contact.title">Contacto</h2>
         <p data-i18n="contact.sub">¿Un proyecto en mente o una pregunta? Escríbeme.</p>
         <div class="contact-links">
-          <!-- Doble salida: el enlace abre el programa de correo, y el botón
-               copia la dirección para quien no tenga ninguno configurado. -->
-          <a class="contact-link" id="enlace-correo"
-             href="mailto:rcquiros04@gmail.com?subject=Contacto%20desde%20tu%20portafolio">
+          <!-- Tres salidas, porque no todo el mundo tiene programa de correo:
+               el enlace abre el suyo si lo tiene, "Gmail" funciona desde
+               cualquier navegador, y "Copiar" siempre funciona. -->
+          <div class="contact-link contacto-correo">
             <span class="contact-label">Email</span>
-            <span class="contact-value">rcquiros04@gmail.com</span>
-            <button type="button" class="copiar" id="copiar-correo"
-                    data-correo="rcquiros04@gmail.com" data-i18n="contact.copiar">Copiar</button>
-          </a>
+            <a class="contact-value" id="enlace-correo"
+               href="mailto:rcquiros04@gmail.com?subject=Contacto%20desde%20tu%20portafolio">rcquiros04@gmail.com</a>
+            <div class="acciones-correo">
+              <a class="accion" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=rcquiros04@gmail.com&amp;su=Contacto%20desde%20tu%20portafolio"
+                 target="_blank" rel="noopener">Gmail</a>
+              <button type="button" class="accion" id="copiar-correo"
+                      data-correo="rcquiros04@gmail.com" data-i18n="contact.copiar">Copiar</button>
+            </div>
+          </div>
           <a class="contact-link" href="https://github.com/Fofiuxx" target="_blank" rel="noopener">
             <span class="contact-label">GitHub</span>
             <span class="contact-value">github.com/Fofiuxx</span>
