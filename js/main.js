@@ -225,7 +225,7 @@
     }
 
     var links = project.links || {};
-    var linkKeys = ["caso", "demo", "repo", "docs"].filter(function (k) { return links[k]; });
+    var linkKeys = ["demo", "prototipo", "caso", "repo", "docs"].filter(function (k) { return links[k]; });
     if (linkKeys.length) {
       var box = el("div", "modal-links");
       linkKeys.forEach(function (key, i) {

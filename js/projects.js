@@ -34,6 +34,7 @@ window.PROJECTS = [
     cover: "assets/img/facturacion-cr.svg",
     tags: ["Node.js", "SQLite", "XAdES", "ESC/POS", "TLS"],
     links: {
+      prototipo: "https://fofiuxx.github.io/facturacion-cr/mockups/pos.html",
       caso: "proyectos/facturacion-cr.html",
       repo: "https://github.com/Fofiuxx/facturacion-cr",
     },
@@ -225,6 +226,7 @@ window.PROJECTS = [
     cover: "assets/img/panel-personal.svg",
     tags: ["JavaScript", "Fetch API", "Webpack", "CSS Grid"],
     links: {
+      demo: "https://fofiuxx.github.io/panel-personal/src/page.html",
       repo: "https://github.com/Fofiuxx/panel-personal",
     },
     es: {

@@ -52,8 +52,9 @@ window.I18N = {
     "modal.tech": "Tecnologías",
     "modal.close": "Cerrar",
     "link.caso": "Leer el caso de estudio",
+    "link.prototipo": "Probar el prototipo",
     "link.repo": "Ver código",
-    "link.demo": "Ver en vivo",
+    "link.demo": "Ver funcionando",
     "link.docs": "Documentación",
 
     "aria.theme": "Cambiar tema",
@@ -107,8 +108,9 @@ window.I18N = {
     "modal.tech": "Built with",
     "modal.close": "Close",
     "link.caso": "Read the case study",
+    "link.prototipo": "Try the prototype",
     "link.repo": "View code",
-    "link.demo": "Live demo",
+    "link.demo": "See it running",
     "link.docs": "Documentation",
 
     "aria.theme": "Toggle theme",
