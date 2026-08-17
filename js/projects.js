@@ -195,6 +195,7 @@ window.PROJECTS = [
     tags: ["Node.js", "Express", "MySQL", "JWT", "bcrypt"],
     entorno: "servidor",
     links: {
+      prototipo: "https://fofiuxx.github.io/ofertas-vuelos/demo/",
       repo: "https://github.com/Fofiuxx/ofertas-vuelos",
     },
     es: {
